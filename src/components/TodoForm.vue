@@ -14,10 +14,9 @@ function addNewTask(){
 </script>
 
 <template>
-    <p>Todo FORM</p>
-    <form  @submit.prevent="addNewTask()">
-        <input type="text" v-model="store.newTodoTitle">
-        <button>Add</button>
+    <form class="text-center" @submit.prevent="addNewTask()">
+        <input type="text" class="w-full rounded-lg" v-model="store.newTodoTitle" placeholder="Tarea Nueva">
+        <button class="bg-white rounded-2xl shadow-lg text-indigo-700 ml-2 h-10 px-5 hover:bg-slate-300 mt-3 ">Agregar Tarea</button>
 
     </form>
     

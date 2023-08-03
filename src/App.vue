@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import TodoApp from './components/TodoApp.vue';
+import TodoApp from "./components/TodoApp.vue";
 
 </script>
 
 <template>
- <TodoApp></TodoApp>
+  <div class="w-5/12 mx-auto mt-8"><TodoApp></TodoApp></div>
 </template>
+
