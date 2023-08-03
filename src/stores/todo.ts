@@ -4,9 +4,9 @@ const api = "https://jsonplaceholder.typicode.com/todos"
 
 interface Itodo{
     userId?: number,
-    id:number,
+    id?:number,
     title:string,
-    completed:boolean
+    completed?:boolean
 }
 interface Istate{
     todo:Itodo,
@@ -30,7 +30,13 @@ export const useTodo = defineStore("todo", {
     actions:{
         async addTodo(task:Itodo){
             try {
-                
+                await axios({
+                    url:api,
+                    method:"POST",
+                    data: {
+                        title:task.title,
+                    }
+                })
                 
             } catch (error) {
                 
